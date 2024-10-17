@@ -6,7 +6,6 @@
     <title>Reserva de Aulas y Recursos</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <div class="container">
@@ -16,19 +15,19 @@
                 <div class="sidebar-logo">
                     <img src="/img/logo.png" alt="Logo">
                 </div>
-            
             </div>
             <ul>
                 <li id="menu-calendario"><a href="#"><i class="icon-calendar"></i>Calendario</a></li>
                 <li id="menu-aulas"><a href="#"><i class="icon-classroom"></i>Aulas</a></li>
                 <li id="menu-recursos"><a href="#"><i class="icon-resources"></i>Recursos</a></li>
                 <li id="menu-cuenta"><a href="#"><i class="icon-user"></i>Mi cuenta</a></li>
+                
+                <li id="menu-registro"><a href="#"><i class="icon-user"></i>Registro</a></li>
+                <li id="menu-login"><a href="#"><i class="icon-user"></i>Login</a></li>
             </ul>
         </nav>
 
-      
         <main>
-      
             <div class="submenu" id="submenu">
                 <button id="btn-resumen">Resumen</button>
                 <button id="btn-panel-control">Panel de control</button>
@@ -38,14 +37,51 @@
             <header>
                 <h1 id="main-title">Seleccione una opción</h1>
             </header>
-            <section class="stats" id="stats">
-              
-            </section>
 
-            <!-- Calendario-->
+            <!-- Sección para Estadísticas -->
+            <section class="stats" id="stats"></section>
+
+            <!-- Sección para el Calendario -->
             <section class="calendar-section" id="calendar-section" style="display: none;">
                 <h2>Calendario</h2>
                 <div id="calendar"></div>
+            </section>
+
+            <!-- Sección para el Formulario de Registro -->
+            <section id="register-section" style="display: none;">
+                <h2>Formulario de Registro</h2>
+                <form method="POST" action="register.php">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br>
+
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required><br>
+
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required><br>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono"><br>
+
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required><br>
+
+                    <input type="submit" value="Registrar">
+                </form>
+            </section>
+
+            <!-- Sección para el Formulario de Login -->
+            <section id="login-section" style="display: none;">
+                <h2>Formulario de Login</h2>
+                <form method="POST" action="login.php">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required><br>
+
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required><br>
+
+                    <input type="submit" value="Iniciar Sesión">
+                </form>
             </section>
         </main>
     </div>
@@ -53,3 +89,6 @@
     <script src="calendario.js"></script>
 </body>
 </html>
+
+  
+                

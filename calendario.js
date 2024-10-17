@@ -4,28 +4,26 @@ const statsSection = document.getElementById('stats');
 const mainTitle = document.getElementById('main-title');
 const submenu = document.getElementById('submenu');
 
+// Nuevos elementos para Registro y Login
+const registerSection = document.getElementById('register-section');
+const loginSection = document.getElementById('login-section');
+
 // Manejamos los clics del menú principal
 document.getElementById('menu-calendario').addEventListener('click', function() {
-    // Cambiamos el título
     mainTitle.textContent = "Calendario de Reservas";
-    
-    // Mostramos el calendario y ocultamos las estadísticas
     calendarSection.style.display = 'block';
     statsSection.style.display = 'none';
-
-    // Mostramos el submenú
+    registerSection.style.display = 'none';
+    loginSection.style.display = 'none';
     submenu.style.display = 'flex';
 });
 
 document.getElementById('menu-aulas').addEventListener('click', function() {
-    // Cambiamos el título
     mainTitle.textContent = "Gestión de Aulas";
-    
-    // Ocultamos el calendario y mostramos estadísticas relacionadas
     calendarSection.style.display = 'none';
     statsSection.style.display = 'flex';
-
-    // Mostramos el submenú
+    registerSection.style.display = 'none';
+    loginSection.style.display = 'none';
     submenu.style.display = 'flex';
 });
 
@@ -33,6 +31,8 @@ document.getElementById('menu-recursos').addEventListener('click', function() {
     mainTitle.textContent = "Gestión de Recursos";
     calendarSection.style.display = 'none';
     statsSection.style.display = 'flex';
+    registerSection.style.display = 'none';
+    loginSection.style.display = 'none';
     submenu.style.display = 'flex';
 });
 
@@ -40,16 +40,39 @@ document.getElementById('menu-cuenta').addEventListener('click', function() {
     mainTitle.textContent = "Mi Cuenta";
     calendarSection.style.display = 'none';
     statsSection.style.display = 'none';
+    registerSection.style.display = 'none';
+    loginSection.style.display = 'none';
     submenu.style.display = 'none';
 });
 
+// Opciones para Registro y Login
+document.getElementById('menu-registro').addEventListener('click', function() {
+    mainTitle.textContent = "Registro de Usuario";
+    calendarSection.style.display = 'none';
+    statsSection.style.display = 'none';
+    registerSection.style.display = 'block';
+    loginSection.style.display = 'none';
+    submenu.style.display = 'none';
+});
 
+document.getElementById('menu-login').addEventListener('click', function() {
+    mainTitle.textContent = "Inicio de Sesión";
+    calendarSection.style.display = 'none';
+    statsSection.style.display = 'none';
+    registerSection.style.display = 'none';
+    loginSection.style.display = 'block';
+    submenu.style.display = 'none';
+});
+
+// Eventos para los botones del submenú
 document.getElementById('btn-resumen').addEventListener('click', function() {
     alert('Mostrar Resumen');
 });
+
 document.getElementById('btn-panel-control').addEventListener('click', function() {
     alert('Mostrar Panel de Control');
 });
+
 document.getElementById('btn-historial').addEventListener('click', function() {
     alert('Mostrar Historial');
 });
@@ -92,3 +115,4 @@ function loadCalendar() {
 }
 
 loadCalendar();
+
