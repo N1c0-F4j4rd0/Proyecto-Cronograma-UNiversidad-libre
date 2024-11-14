@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #b90c0c; 
+    padding: 15px;
+    height: 100vh; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar h2 {
+    color: white; 
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block; 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+.sidebar a:hover {
+    background-color: #f60000; 
+}
+
+.logout-btn {
+    background-color: #d9534f; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px;
+    border-radius: 5px; 
+    position: absolute; 
+    bottom: 15px; 
+    left: 15px; 
+    width: calc(100% - 30px); 
+}
+
+.logout-btn:hover {
+    background-color: #fff;
+    color: #000; 
+    transition: background-color 0.3s;
+}
+
+
+.content {
+    margin-left: 260px; 
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+.logo-dashboard {
+    margin-bottom: 30px;
+}
+
+.logo-style {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
+
+.btn {
+    background-color: #f60000;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.categories {
+    margin-bottom: 20px; /* Espacio entre categorías y tabla */
+}
+
+.table {
+    width: 100%; /* Hacer que la tabla ocupe todo el ancho */
+    margin-top: 10px; /* Espacio encima de la tabla */
+}
+
+.btn-info {
+    margin-right: 5px; /* Espacio entre botones de categorías */
+}
+
+.parrafo-categorias-menu {
+    margin: 15px 0 20px 0;
+    text-align: center;
+}
+
+.calendar-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.day {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.day:hover {
+    background-color: #f1f1f1;
+}
+
+.day-header {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.event {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.month-year {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.month-year h3 {
+    margin: 0;
+}
+
+.info-section {
+    display: none; /* Ocultar todas las secciones por defecto */
+}
+
+/* Clase para ocultar una sección */
+.hidden {
+    display: none;
+}
+
+/* Clase para mostrar una sección */
+.visible {
+    display: block;
+}
+
+
+#classroom-options .btn, 
+#resource-options .btn {
+    margin: 5px 5px 10px 0; 
+}
+
+#classroom-options, 
+#resource-options {
+    margin-top: 15px;
+}
+
+
+.btn-group {
+    display: flex;
+    gap: 10px; 
+    margin-bottom: 15px; 
+}
+
+/* Estilo del formulario */
+
+#form-container {
+    background-color: #fff; /* Fondo blanco para resaltar el formulario */
+    padding: 30px; /* Padding para separar el contenido del borde */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    margin-top: 20px; /* Espacio superior */
+    max-width: 600px; /* Max ancho para el formulario */
+    margin-left: auto;
+    margin-right: auto; /* Centrado */
+}
+
+/* Estilo para los títulos del formulario */
+#form-title {
+    font-size: 1.8rem;
+    color: #b90c0c; /* Color de texto para el título */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los campos del formulario */
+#dynamicForm input, 
+#dynamicForm textarea {
+    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+    padding: 12px; /* Padding para darle espacio interno */
+    margin-bottom: 15px; /* Margen inferior para separación entre campos */
+    border: 2px solid #ddd; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente adecuado */
+    transition: border-color 0.3s ease; /* Transición suave en el borde */
+}
+
+/* Efecto al hacer foco en los campos */
+#dynamicForm input:focus, 
+#dynamicForm textarea:focus {
+    border-color: #f60000; /* Cambio de color cuando el campo está en foco */
+    box-shadow: 0 0 5px rgba(246, 0, 0, 0.3); /* Resaltado sutil */
+    outline: none; /* Elimina el borde por defecto del navegador */
+}
+
+/* Estilo de las etiquetas */
+#dynamicForm label {
+    font-size: 1.2rem; /* Tamaño de letra para las etiquetas */
+    color: #333; /* Color de las etiquetas */
+    font-weight: 500; /* Negrita ligera */
+    margin-bottom: 8px; /* Margen inferior para separar de los campos */
+    display: block; /* Asegura que las etiquetas estén por encima de los campos */
+}
+
+/* Estilo para los botones del formulario */
+button[type="submit"] {
+    background-color: #f60000; /* Fondo rojo para el botón */
+    color: white; /* Texto blanco */
+    padding: 12px 20px; /* Relleno interno del botón */
+    font-size: 1.1rem; /* Tamaño de fuente del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    width: 100%; /* Hace que el botón ocupe todo el ancho */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+button[type="submit"]:hover {
+    background-color: #b90c0c; /* Cambio de color al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Espaciado entre los botones de las acciones (agregar, modificar, eliminar) */
+.btn-group .btn {
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Estilo para el contenedor de mensajes de error */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Mostrar el mensaje de error si es necesario */
+input:invalid ~ .error-message,
+textarea:invalid ~ .error-message {
+    display: block;
+}
